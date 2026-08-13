@@ -3,34 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Predator 2 — Sega Genesis</title>
+  <title>Predator 2</title>
   <style>
     body {
       background-color: #121212;
       color: #ffffff;
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
       margin: 0;
-      padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
     }
-
-    h1 {
-      margin-bottom: 20px;
-      font-size: 1.5rem;
-    }
-
-    /* Контейнер для эмулятора */
     #emulator-container {
       width: 640px;
       height: 480px;
       max-width: 95vw;
       max-height: 80vh;
       border: 2px solid #333;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     }
   </style>
 </head>
@@ -42,19 +33,20 @@
     <div id="game"></div>
   </div>
 
-  <!-- Настройки эмулятора -->
   <script>
     EJS_player = '#game';
-    EJS_core = 'segaMD'; // Ядро Sega Mega Drive / Genesis
+    EJS_core = 'sega';
     
-    // Имя вашего файла рома
-    // Убедитесь, что расширение (.bin / .md) совпадает с вашим файлом!
-    EJS_gameUrl = 'Predator 2.bin'; 
+    // Новое точное имя файла без пробелов
+    EJS_gameUrl = 'predator2.bin'; 
     
-    // CDN с библиотеками EmulatorJS
     EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
   </script>
 
+  <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+
+</body>
+</html>
   <!-- Скрипт загрузки -->
   <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
 
